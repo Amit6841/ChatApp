@@ -1,0 +1,71 @@
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: #2d2d2d;
+
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column; /* Use relative height */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Add this for Chrome, Edge, and Safari */
+.message-container::-webkit-scrollbar {
+    display: none;
+}
+
+.message-left,
+.message-right {
+    min-width: 100px;
+    list-style: none;
+    padding: 4px 12px;
+    margin: 12px;
+    max-width: 250px;
+    font-size: 18px;
+    word-wrap: break-word;
+    background: #892CDC;
+}
+
+.message-left {
+    border-radius: 20px 20px 20px 0px;
+    align-self: flex-start;
+    background-color: #212121;
+   
+}
+
+.message-right {
+    border-radius: 20px 20px 0px 20px;
+    align-self: flex-end;
+    background: #2d2d2d; /* Fallback color */
+    background: #892CDC;
+    color: #f6f6f6;
+}
+
+.message-left>span,
+.message-right>span {
+    display: block;
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.feedback {
+    font-style: italic;
+    font-size: 14px;
+    padding: 16px; /* Uniform padding */
+    color: #ffffff;
+    text-align: center;
+}
+
+.message-left:hover,
+.message-right:hover {
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out;
+}

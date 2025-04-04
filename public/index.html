@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Chat App</title>
+</head>
+
+<body>
+    <div class="h-full flex flex-col items-center justify-center text-white">
+        <h1 class="text-3xl m-5 text-[#892CDC]">Chat App</h1>
+        <main class="h-[600px] w-[350px] bg-[#000000] rounded-2xl">
+
+            <span class="h-[60px] w-[100%] px-2 flex items-center  bg-[#892CDC] rounded-t-2xl">
+                <i class="fa-solid fa-user text-white p-3 rounded-full "></i>
+                <input type="text" placeholder="enter name" maxlength="16" id="nameInput" class="bg-[#892CDC] outline-none bg-[#393E46] py-1 px-2 rounded-3xl" autocomplete="off">
+                <div id="client-active" class="text-white ml-5">hello</div>
+            </span>
+            <ul class="message-container h-[480px] w-[100%] p-2 flex flex-col-reverse " id="message-container">
+                <li class="message-feedback">
+                    <p class="feedback ">
+
+                    </p>
+                </li>
+            </ul>
+            <form class="flex justify-between items-center w-[100%] px-1" id="message-form">
+                <input type="text" id="message-input" class="h-12 w-[100%] px-5 bg-[#212121] rounded-3xl outline-none"
+                    placeholder="Type a message" autocomplete="off" required>
+                <button class="bg-blue-500 h-11 w-12 rounded-3xl"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </main>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+        integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
